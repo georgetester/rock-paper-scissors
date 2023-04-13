@@ -1,13 +1,15 @@
 let playerScore = 0;
 let computerScore = 0;
 
-
 function getComputerChoice() {
     let choices = ["rock", "paper", "scissors"];
     let computerSelection = choices[Math.floor(3 * Math.random())];
     return computerSelection;
 }
 
+const btn = document.querySelectorAll('.button');
+
+btn.addEventListener(click, playGame());
 
 
 function playRound() {
@@ -39,9 +41,6 @@ function playRound() {
     }
 }
 
-
-
-
 function playGame() {
     while (playerScore < 5 && computerScore < 5) {
         playRound();
@@ -57,4 +56,3 @@ function playGame() {
 }
 
 
-playGame();
